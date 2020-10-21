@@ -284,4 +284,20 @@ public class Sudoku extends LatinSquare {
 			index++;
 		}
 	}
+	/**
+	 * FillDiagonalRegions - Sets and Shuffles the Diagonal Regions of the Sudoku Puzzle
+	 * 
+	 * @param null
+	 * 
+	 * @return void
+	 * 
+	 * 
+	 * 
+	 */
+	protected void FillDiagonalRegions() {
+		for(int i = 0; i < super.getLatinSquare().length; i +=  this.iSqrtSize+1) {
+				//SetRegion(i);
+				//ShuffleRegion(i);
+		}
+	}
 }
