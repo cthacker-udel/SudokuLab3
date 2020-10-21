@@ -138,7 +138,17 @@ public class Sudoku extends LatinSquare {
 	 *            given region
 	 * @return - returns a one-dimensional array from a given region of the puzzle
 	 */
-
+	public int getRegionNbr(int row, int column) {//function to get the region number based off of row and column
+		return (column / iSqrtSize) + ((row / iSqrtSize) * iSqrtSize);
+	}
+	public void printPuzzle(int[][] puzzle) {
+		for(int i = 0; i < iSqrtSize*iSqrtSize; i++) {
+			for(int j = 0; j <iSqrtSize*iSqrtSize; j++) {
+				System.out.print(puzzle[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
 	public int[] getRegion(int r) {
 
 		int[] reg = new int[super.getLatinSquare().length];
