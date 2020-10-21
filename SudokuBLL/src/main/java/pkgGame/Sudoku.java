@@ -198,6 +198,14 @@ public class Sudoku extends LatinSquare {
 		return true;
 
 	}
+	
+	private void shuffleRegion (int reg) {
+		ArrayList<Region> regnum = new ArrayList<>();
+		for (int region: reg) {
+			regnum.add(region);
+		}
+		Collections.shuffle(regnum);
+	}
 
 	/**
 	 * isSudoku - return 'true' if...
