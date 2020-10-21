@@ -291,7 +291,7 @@ public class Sudoku extends LatinSquare {
 	 * 
 	 * @return void
 	 * 
-	 * 
+	 * @author - Cameron Thacker
 	 * 
 	 */
 	protected void FillDiagonalRegions() {
