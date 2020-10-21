@@ -108,6 +108,11 @@ public class Sudoku extends LatinSquare {
 	 *            given row
 	 * @return - returns a one-dimensional array from a given region of the puzzle
 	 */
+	
+	private void setRegion(int r) {
+		//getregion
+		//with that region returned set the region
+	}
 	public int[] getRegion(int iCol, int iRow) {
 
 		int i = (iCol / iSqrtSize) + ((iRow / iSqrtSize) * iSqrtSize);
@@ -200,11 +205,9 @@ public class Sudoku extends LatinSquare {
 	}
 	
 	private void shuffleRegion (int reg) {
-		ArrayList<Region> regnum = new ArrayList<>();
-		for (int region: reg) {
-			regnum.add(region);
-		}
-		Collections.shuffle(regnum);
+		//setregion set the region with reg
+		//getregion get the region with reg
+		//shuffle region returned from getregion
 	}
 
 	/**
