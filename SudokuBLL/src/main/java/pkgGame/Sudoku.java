@@ -1,5 +1,8 @@
 package pkgGame;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import pkgEnum.ePuzzleViolation;
 import pkgHelper.LatinSquare;
 import pkgHelper.PuzzleViolation;
@@ -259,5 +262,26 @@ public class Sudoku extends LatinSquare {
 		}
 		
 		return true;
+	}
+	/**
+	 * Shuffle Array - given an one-dimensional integer array, shuffles the array using Collections.shuffle
+	 * 
+	 * @param int[] array
+	 * 
+	 * @return - void
+	 * 
+	 * @author - Cameron Thacker
+	 */
+	protected void shuffleArray(int[] array) {
+		int index = 0;
+		ArrayList<Integer> newlist = new ArrayList<>();
+		for(int eachinteger: array) {
+			newlist.add(eachinteger);
+		}
+		Collections.shuffle(newlist);
+		for(int eachnumber: newlist) {
+			array[index] = eachnumber;
+			index++;
+		}
 	}
 }
