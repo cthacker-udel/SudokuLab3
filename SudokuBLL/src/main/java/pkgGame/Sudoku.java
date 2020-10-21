@@ -109,10 +109,6 @@ public class Sudoku extends LatinSquare {
 	 * @return - returns a one-dimensional array from a given region of the puzzle
 	 */
 	
-	private void setRegion(int r) {
-		//getregion
-		//with that region returned set the region
-	}
 	public int[] getRegion(int iCol, int iRow) {
 
 		int i = (iCol / iSqrtSize) + ((iRow / iSqrtSize) * iSqrtSize);
@@ -169,6 +165,16 @@ public class Sudoku extends LatinSquare {
 		return reg;
 	}
 	
+	private void SetRgion(int r) {
+		int number = 1;
+
+		for (int i = (r / iSqrtSize) * iSqrtSize; i < ((r / iSqrtSize) * iSqrtSize) + iSqrtSize; i++) {
+			for (int j = (r % iSqrtSize) * iSqrtSize; j < ((r % iSqrtSize) * iSqrtSize) + iSqrtSize; j++) {
+				super.getLatinSquare()[i][j] = number++;
+			}
+		}
+	}
+	
  
 	
 	@Override
@@ -214,11 +220,6 @@ public class Sudoku extends LatinSquare {
 
 	}
 	
-	private void shuffleRegion (int reg) {
-		//setregion set the region with reg
-		//getregion get the region with reg
-		//shuffle region returned from getregion
-	}
 
 	/**
 	 * isSudoku - return 'true' if...
@@ -305,6 +306,18 @@ public class Sudoku extends LatinSquare {
 			index++;
 		}
 	}
+	
+	private void ShuffleRegion(int r) {
+		int[] region = getRegion(r);
+		shuffleArray(region);
+		int local = 0;
+		for (int i = (r / iSqrtSize) * iSqrtSize; i < ((r / iSqrtSize) * iSqrtSize) + iSqrtSize; i++) {
+			for (int j = (r % iSqrtSize) * iSqrtSize; j < ((r % iSqrtSize) * iSqrtSize) + iSqrtSize; j++) {
+				this.getPuzzle()[i][j] = region[local++];
+			}
+		}
+	}
+	
 	/**
 	 * FillDiagonalRegions - Sets and Shuffles the Diagonal Regions of the Sudoku Puzzle
 	 * 
