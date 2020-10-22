@@ -363,4 +363,14 @@ public class SudokuTest {
 			fail("Bad Sudoku");
 		}
 	}
+	@Test
+	public void testShuffleArray() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
 }
