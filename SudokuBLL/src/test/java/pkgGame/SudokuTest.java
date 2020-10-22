@@ -275,7 +275,8 @@ public class SudokuTest {
 		}
 		
 	}
-	@Test public void testValidValue2() {
+	@Test 
+	public void testValidValue2() {
 		try {
 			int[][] puzzle = { { 1, 2, 3, 4 }, { 3, 4, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			Sudoku s1 = new Sudoku(puzzle);
@@ -285,7 +286,8 @@ public class SudokuTest {
 			fail("Bad Sudoku");
 		}
 	}
-	@Test public void testValidValue3() {
+	@Test 
+	public void testValidValue3() {
 		try {
 			int[][] puzzle = { { 1, 2, 3, 4 }, { 0, 4, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			Sudoku s1 = new Sudoku(puzzle);
@@ -295,7 +297,8 @@ public class SudokuTest {
 			fail("Bad Sudoku");
 		}
 	}
-	@Test public void testValidValue4() {
+	@Test 
+	public void testValidValue4() {
 		try {
 			int[][] puzzle = { { 1, 2, 0, 4 }, { 3, 4, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			Sudoku s1 = new Sudoku(puzzle);
@@ -305,13 +308,58 @@ public class SudokuTest {
 			fail("Bad Sudoku");
 		}
 	}
-	@Test public void testValidValue5() {
+	@Test 
+	public void testValidValue5() {
 		try {
 			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			Sudoku s1 = new Sudoku(puzzle);
 			assertEquals(false,s1.isValidValue(0,0,2));
 		}
 		catch(Exception e) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testgetRegionNbr() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+			assertEquals(0,s1.getRegionNbr(0, 0));
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testgetRegionNbr2() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+			assertEquals(1,s1.getRegionNbr(0, 2));
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testgetRegionNbr3() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+			assertEquals(2,s1.getRegionNbr(2, 0));
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testgetRegionNbr4() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+			assertEquals(3,s1.getRegionNbr(2, 2));
+		}
+		catch(Exception ex) {
 			fail("Bad Sudoku");
 		}
 	}
