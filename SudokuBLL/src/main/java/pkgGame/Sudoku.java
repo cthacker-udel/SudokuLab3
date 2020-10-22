@@ -165,7 +165,7 @@ public class Sudoku extends LatinSquare {
 		return reg;
 	}
 	
-	private void SetRgion(int r) {
+	private void SetRegion(int r) {
 		int number = 1;
 
 		for (int i = (r / iSqrtSize) * iSqrtSize; i < ((r / iSqrtSize) * iSqrtSize) + iSqrtSize; i++) {
@@ -330,8 +330,8 @@ public class Sudoku extends LatinSquare {
 	 */
 	protected void FillDiagonalRegions() {
 		for(int i = 0; i < super.getLatinSquare().length; i +=  this.iSqrtSize+1) {
-				//SetRegion(i);
-				//ShuffleRegion(i);
+			this.SetRegion(i);
+			this.ShuffleRegion(i);
 		}
 	}
 }
