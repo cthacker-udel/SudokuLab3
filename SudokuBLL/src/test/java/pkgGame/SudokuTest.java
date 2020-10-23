@@ -7,7 +7,7 @@ import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
+import java.lang.reflect.*;
 public class SudokuTest {
  
 	@Test
@@ -406,6 +406,24 @@ public class SudokuTest {
 			Sudoku s1 = new Sudoku(puzzle);
 			s1.shuffleArray(s1.getRow(3));
 			assertNotSame(new int[] {4,3,2,1},s1.getRow(3));
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testShuffleRegion() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, 
+							   { 3, 2, 1, 2 }, 
+					           { 2, 1, 4, 3 }, 
+					           { 4, 3, 2, 1 } };
+			 Sudoku s1 = new Sudoku(puzzle);
+			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
+			 method.setAccessible(true);
+			 method.invoke(s1, 0);
+			 assertNotSame(new int[] {1,0,3,2},s1.getRegion(0));
+			
 		}
 		catch(Exception ex) {
 			fail("Bad Sudoku");
