@@ -368,6 +368,44 @@ public class SudokuTest {
 		try {
 			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			Sudoku s1 = new Sudoku(puzzle);
+			s1.shuffleArray(s1.getRow(0));
+			assertNotSame(new int[] {1,0,0,4},s1.getRow(0));
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testShuffleArray2() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+			s1.shuffleArray(s1.getRow(1));
+			assertNotSame(new int[] {3,2,1,2},s1.getRow(1));
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testShuffleArray3() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+			s1.shuffleArray(s1.getRow(2));
+			assertNotSame(new int[] {2,1,4,3},s1.getRow(2));
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testShuffleArray4() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
+			Sudoku s1 = new Sudoku(puzzle);
+			s1.shuffleArray(s1.getRow(3));
+			assertNotSame(new int[] {4,3,2,1},s1.getRow(3));
 		}
 		catch(Exception ex) {
 			fail("Bad Sudoku");
