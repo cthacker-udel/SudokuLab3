@@ -414,10 +414,7 @@ public class SudokuTest {
 	@Test
 	public void testShuffleRegion() {
 		try {
-			int[][] puzzle = { { 1, 0, 0, 4 }, 
-							   { 3, 2, 1, 2 }, 
-					           { 2, 1, 4, 3 }, 
-					           { 4, 3, 2, 1 } };
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
 			 method.setAccessible(true);
@@ -432,10 +429,7 @@ public class SudokuTest {
 	@Test
 	public void testShuffleRegion2() {
 		try {
-			int[][] puzzle = { { 1, 0, 0, 4 }, 
-							   { 3, 2, 1, 2 }, 
-					           { 2, 1, 4, 3 }, 
-					           { 4, 3, 2, 1 } };
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
 			 method.setAccessible(true);
@@ -450,10 +444,7 @@ public class SudokuTest {
 	@Test
 	public void testShuffleRegion3() {
 		try {
-			int[][] puzzle = { { 1, 0, 0, 4 }, 
-							   { 3, 2, 1, 2 }, 
-					           { 2, 1, 4, 3 }, 
-					           { 4, 3, 2, 1 } };
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
 			 method.setAccessible(true);
@@ -468,10 +459,7 @@ public class SudokuTest {
 	@Test
 	public void testShuffleRegion4() {
 		try {
-			int[][] puzzle = { { 1, 0, 0, 4 }, 
-							   { 3, 2, 1, 2 }, 
-					           { 2, 1, 4, 3 }, 
-					           { 4, 3, 2, 1 } };
+			int[][] puzzle = { { 1, 0, 0, 4 }, { 3, 2, 1, 2 }, { 2, 1, 4, 3 }, { 4, 3, 2, 1 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
 			 method.setAccessible(true);
@@ -486,10 +474,7 @@ public class SudokuTest {
 	@Test
 	public void testSetRegion() {
 		try {
-			int[][] puzzle = { { 0, 0, 0, 0 }, 
-							   { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 } };
+			int[][] puzzle = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("SetRegion", int.class);
 			 method.setAccessible(true);
@@ -504,10 +489,7 @@ public class SudokuTest {
 	@Test
 	public void testSetRegion2() {
 		try {
-			int[][] puzzle = { { 0, 0, 0, 0 }, 
-							   { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 } };
+			int[][] puzzle = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("SetRegion", int.class);
 			 method.setAccessible(true);
@@ -522,10 +504,7 @@ public class SudokuTest {
 	@Test
 	public void testSetRegion3() {
 		try {
-			int[][] puzzle = { { 0, 0, 0, 0 }, 
-							   { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 } };
+			int[][] puzzle = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("SetRegion", int.class);
 			 method.setAccessible(true);
@@ -540,10 +519,7 @@ public class SudokuTest {
 	@Test
 	public void testSetRegion4() {
 		try {
-			int[][] puzzle = { { 0, 0, 0, 0 }, 
-							   { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 }, 
-					           { 0, 0, 0, 0 } };
+			int[][] puzzle = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
 			 Sudoku s1 = new Sudoku(puzzle);
 			 Method method = Sudoku.class.getDeclaredMethod("SetRegion", int.class);
 			 method.setAccessible(true);
