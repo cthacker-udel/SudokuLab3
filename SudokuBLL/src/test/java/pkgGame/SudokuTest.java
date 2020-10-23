@@ -429,4 +429,58 @@ public class SudokuTest {
 			fail("Bad Sudoku");
 		}
 	}
+	@Test
+	public void testShuffleRegion2() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, 
+							   { 3, 2, 1, 2 }, 
+					           { 2, 1, 4, 3 }, 
+					           { 4, 3, 2, 1 } };
+			 Sudoku s1 = new Sudoku(puzzle);
+			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
+			 method.setAccessible(true);
+			 method.invoke(s1, 1);
+			 assertNotSame(new int[] {0,4,1,2},s1.getRegion(1));
+			
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testShuffleRegion3() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, 
+							   { 3, 2, 1, 2 }, 
+					           { 2, 1, 4, 3 }, 
+					           { 4, 3, 2, 1 } };
+			 Sudoku s1 = new Sudoku(puzzle);
+			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
+			 method.setAccessible(true);
+			 method.invoke(s1, 2);
+			 assertNotSame(new int[] {2,1,4,3},s1.getRegion(2));
+			
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void testShuffleRegion4() {
+		try {
+			int[][] puzzle = { { 1, 0, 0, 4 }, 
+							   { 3, 2, 1, 2 }, 
+					           { 2, 1, 4, 3 }, 
+					           { 4, 3, 2, 1 } };
+			 Sudoku s1 = new Sudoku(puzzle);
+			 Method method = Sudoku.class.getDeclaredMethod("ShuffleRegion", int.class);
+			 method.setAccessible(true);
+			 method.invoke(s1, 3);
+			 assertNotSame(new int[] {4,3,2,1},s1.getRegion(3));
+			
+		}
+		catch(Exception ex) {
+			fail("Bad Sudoku");
+		}
+	}
 }
